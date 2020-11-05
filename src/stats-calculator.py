@@ -42,3 +42,22 @@ print(randomB)
 print("\n")
 print("------------------------------------------------------")
 print("\n")
+
+# Random Number List with a seed
+randomX = []
+randomY = []
+for i in range(0,10):
+    random.seed(10)
+    a = random.randint(5,50)
+    b = round(random.uniform(1,10),4)
+    randomX.append(a)
+    randomY.append(b)
+
+print("\nRandom Numbers list With SEED: \n")
+print("Integer Numbers: ")
+print(randomX)
+print("\nFloat Numbers: ")
+print(randomY)
+print("\n")
+print("------------------------------------------------------")
+print("\n")
