@@ -21,6 +21,10 @@ def variance_main(a):
     x = statistics.variance(a)
     return x
 
+def std_main(a):
+    x = np.std(a)
+    return x
+
 class Calculator:
     result = 0
 
@@ -38,4 +42,8 @@ class Calculator:
 
     def variance1(a):
         result = variance_main(a)
+        return result
+
+    def std1(a):
+        result = std_main(a)
         return result
