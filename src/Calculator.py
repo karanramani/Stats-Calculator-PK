@@ -13,6 +13,10 @@ def median_main(a):
     x = np.median(a)
     return x
 
+def mode_main(a):
+    x = statistics.mode(a)
+    return x
+
 class Calculator:
     result = 0
 
@@ -22,4 +26,8 @@ class Calculator:
 
     def median1(a):
         result = median_main(a)
+        return result
+
+    def mode1(a):
+        result = mode_main(a)
         return result
