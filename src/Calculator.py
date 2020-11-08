@@ -17,6 +17,10 @@ def mode_main(a):
     x = statistics.mode(a)
     return x
 
+def variance_main(a):
+    x = statistics.variance(a)
+    return x
+
 class Calculator:
     result = 0
 
@@ -30,4 +34,8 @@ class Calculator:
 
     def mode1(a):
         result = mode_main(a)
+        return result
+
+    def variance1(a):
+        result = variance_main(a)
         return result
