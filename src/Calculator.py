@@ -25,6 +25,10 @@ def std_main(a):
     x = np.std(a)
     return x
 
+def zscore_main(a):
+    x = st.zscore(a)
+    return x
+
 class Calculator:
     result = 0
 
@@ -46,4 +50,8 @@ class Calculator:
 
     def std1(a):
         result = std_main(a)
+        return result
+
+    def zscore(a):
+        result = zscore_main(a)
         return result
