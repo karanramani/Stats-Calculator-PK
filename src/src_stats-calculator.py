@@ -1,5 +1,5 @@
 import random
-from src.Calculator import Calculator
+from Calculator import Calculator
 print("\n")
 print("\n")
 
