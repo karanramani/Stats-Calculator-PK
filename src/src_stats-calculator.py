@@ -165,3 +165,32 @@ print("\n")
 print("------------------------------------------------------")
 print("\n")
 
+print("Exception divide by 0 using a randomchoice value:")
+
+while True:
+    try:
+        x = randomchoice1/0
+        continue
+    except:
+        print("error cannot divide by 0")
+        break
+        exit(1)
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+
+
+print("Exception for empty list:")
+
+while True:
+    try:
+        empList = []
+        x = empList/randomchoice1
+    except:
+        print("Error empty list")
+        break
+        exit(1)
+
+
+
