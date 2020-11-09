@@ -61,3 +61,45 @@ print(randomY)
 print("\n")
 print("------------------------------------------------------")
 print("\n")
+
+# 4. Select a random item from a list
+    # Random item from list without seed
+randomchoice1 = random.choice(randomA)
+randomchoice2 = random.choice(randomB)
+
+print("Random Choice 1 (From Integer list without seed): ")
+print(randomchoice1)
+print("Random Choice 2 (From Float list without seed): ")
+print(randomchoice2)
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+
+print("\n")
+
+# 5. Set a seed and randomly.select the same value from a list
+randomchoicewseed1 = random.choice(randomX)
+randomchoicewseed2 = random.choice(randomY)
+
+print("Random Choice 1 (From Integer list with seed): ")
+print(randomchoicewseed1)
+
+print("Random Choice 2 (From Float list with seed): ")
+print(randomchoicewseed2)
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+
+# 6. Select N number of items from a list without a seed
+N = 10
+print("N number of items from a list without a seed(Integer):")
+print(random.sample(randomA, N))
+print("\n")
+print("N number of items from a list without a seed(Float):")
+print(random.sample(randomB, N))
+print("\n")
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
