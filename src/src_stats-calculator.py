@@ -61,3 +61,16 @@ print(randomY)
 print("\n")
 print("------------------------------------------------------")
 print("\n")
+
+# 4. Select a random item from a list
+    # Random item from list without seed
+randomchoice1 = random.choice(randomA)
+randomchoice2 = random.choice(randomB)
+
+print("Random Choice 1 (From Integer list without seed): ")
+print(randomchoice1)
+print("Random Choice 2 (From Float list without seed): ")
+print(randomchoice2)
+print("\n")
+print("------------------------------------------------------")
+print("\n")
