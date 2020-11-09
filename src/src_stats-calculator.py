@@ -103,3 +103,14 @@ print("\n")
 print("\n")
 print("------------------------------------------------------")
 print("\n")
+
+# 7. Select N number of items from a list with a seed
+print("N number of items from a list with a seed(Integer):")
+print(random.sample(randomX, N))
+print("\n")
+print("N number of items from a list with a seed(Float):")
+print(random.sample(randomY, N))
+
+print("\n")
+print("---------------------------------------------------------------------------------------------------------------")
+print("\n")
