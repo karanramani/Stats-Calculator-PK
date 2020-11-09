@@ -29,6 +29,14 @@ def zscore_main(a):
     x = st.zscore(a)
     return x
 
+def margin_of_error_main(n, z, t):
+    x = (math.sqrt(n)/t)*z
+    return x
+
+def cochran_main(z, p, e):
+    x = (z**2*p*(1-p))/e**2
+    return x
+
 class Calculator:
     result = 0
 
@@ -54,4 +62,12 @@ class Calculator:
 
     def zscore(a):
         result = zscore_main(a)
+        return result
+
+    def margin_of_error(n, z, t):
+        result = margin_of_error_main(n, z, t)
+        return result
+
+    def cochran(z, p, e):
+        result = cochran_main(z, p, e)
         return result

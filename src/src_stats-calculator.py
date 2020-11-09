@@ -1,9 +1,17 @@
 import random
+import math
+from random import sample
+import numpy as np
+import scipy.stats as st
+import statistics
 from Calculator import Calculator
+
 print("\n")
 print("\n")
 
-# Random number without a seed (SINGLE)
+# Random Generator function
+#
+# 1. Generate a random number without a seed between a range of two numbers - Both Integer and Decimal
 print ("Generating random number integer (without a seed):")
 print(random.randrange(100,200))
 
@@ -14,21 +22,24 @@ print("\n")
 print("------------------------------------------------------")
 print("\n")
 
-# Random number with a seed (SINGLE)
+# 2. Generate a random number with a seed between a range of two numbers - Both Integer and Decimal
+
 print ("Generating random number integer (with a seed):")
 random.seed(10)
 print(random.randint(5,50))
 print ("Generating random number decimal (with a seed):")
 random.seed(10.0)
 print(round(random.uniform(1,30),4))
+
 print("\n")
 print("------------------------------------------------------")
 print("\n")
 
-# Random number list without a seed
+# 3a. Generate a list of N random numbers without a seed and between a range of numbers - Both Integer and Decimal
+
 randomA = []
 randomB = []
-for i in range(0,10):
+for i in range(0,30):
     x = random.randrange(100,200)
     y = round(random.uniform(1,10),4)
     randomA.append(x)
@@ -39,14 +50,16 @@ print("Integer Numbers: ")
 print(randomA)
 print("\nFloat Numbers: ")
 print(randomB)
+
 print("\n")
 print("------------------------------------------------------")
 print("\n")
 
-# Random Number List with a seed
+# 3b. Generate a list of N random numbers with a seed and between a range of numbers - Both Integer and Decimal
+
 randomX = []
 randomY = []
-for i in range(0,10):
+for i in range(0,30):
     random.seed(10)
     a = random.randint(5,50)
     b = round(random.uniform(1,10),4)
@@ -58,6 +71,7 @@ print("Integer Numbers: ")
 print(randomX)
 print("\nFloat Numbers: ")
 print(randomY)
+
 print("\n")
 print("------------------------------------------------------")
 print("\n")
@@ -113,6 +127,74 @@ print(random.sample(randomY, N))
 
 print("\n")
 print("---------------------------------------------------------------------------------------------------------------")
+print("\n")
+
+# Population Sampling functions
+#
+# 1. Simple random sampling
+print("Simple Random Sampling from Integer without a Seed list:\n")
+simpleA= sample(randomA,15)
+print(simpleA)
+print("\n")
+print("Simple Random Sampling from Float without a Seed list:\n")
+simpleB= sample(randomB,15)
+print(simpleB)
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+# 2. Confidence Interval For a Sample
+
+print("Confidence Interval For a Sample from Integer without a Seed List")
+confidenceInterval= st.t.interval(alpha=0.95, df=len(simpleA)-1, loc=np.mean(simpleA), scale=st.sem(simpleA))
+print(confidenceInterval)
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+
+# 3. Margin of Error
+
+n = random.choice(simpleA)
+z = Calculator.zscore(randomA)
+t = Calculator.std1(randomA)
+
+print("Margin of Error: ")
+
+print(Calculator.margin_of_error(n, z, t))
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+
+# Cochran’s Sample Size Formula
+
+p = random.choice(simpleB)
+e = random.choice(simpleB)
+
+print("Cochran's Sample size formula")
+print(Calculator.cochran(z, p, e))
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+
+# How to Find a Sample Size Given a Confidence Interval and Width (unknown population standard deviation)
+width = random.choice(simpleB)
+a = confidenceInterval[0]/2
+b = Calculator.zscore(confidenceInterval)
+p = width/2
+q = 0.50
+p2 = 1-q
+c = q*p2
+d = a / b
+e = d * d
+Final = c*e
+print("How to Find a Sample Size Given a Confidence Interval and Width (unknown population standard deviation):")
+print(Final)
+
+print("\n")
+print("------------------------------------------------------")
 print("\n")
 
 # Descriptive Statistics functions - PRIYESHA
