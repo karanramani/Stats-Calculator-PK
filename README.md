@@ -6,7 +6,28 @@
 * Baxi, Priyesha
 * Ramani, Karan
 
-#### For this project you need to submit a link to the repository on GitHub that has a build icon from Travis that shows passing.  
-#### On your Readme file, you should include your project task list and program diagram or outline.  
-#### Your readme should show the partners that worked on the project and what they did.  
-#### You can use more than one page by making additional text files and linking to them.
+## Project Outline:
+#### This project goes over basic stats Calculator that shows the ability to perfom statistic functions in different areas and with different formulas.
+#### It also shows the use of multiple libraries being used (numpy, scipy, etc.)
+#### The whole program is written in src folder, file name: src_stats-calculator.py, which is the main file that inherits functions from the Calculator.py file.
+
+## Below are the task lists and assigner member to perform: 
+  
+ ### Project Initial setup phase:
+ #### Assigned to: Ramani, Karan
+ * Initial Repository setup
+ * Travis build
+ * Docker Setup
+ * Main python program file setup
+ * Random number Generator Functions
+ * Population Sampling Functions
+ 
+ #### Assigned to: Baxi, Priyesha
+ * Setting up Functions file (Calculator.py)
+ * Enable inheritance
+ * Descriptive Statistics Function
+ * Throwing exceptions for empty strings and divide by zero
+ * Github Project Plan up
+ * File fixtures for continuous sync 
+  
+  
