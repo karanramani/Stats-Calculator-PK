@@ -1,5 +1,5 @@
 import random
-
+from src.Calculator import Calculator
 print("\n")
 print("\n")
 
@@ -113,4 +113,32 @@ print(random.sample(randomY, N))
 
 print("\n")
 print("---------------------------------------------------------------------------------------------------------------")
+print("\n")
+
+# Descriptive Statistics functions - PRIYESHA
+
+print("Descriptive Statistics functions: \n")
+# Calculator.mean()
+a = [1,2,3,4,5]
+print(Calculator.mean1(a))
+
+print("mean:")
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+
+print("median:")
+a = [1,2,3,4,5,6]
+print(Calculator.median1(a))
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+print("mode:")
+a = [1,2,3,4,5,6,6,5,5]
+print(Calculator.mode1(a))
+
+print("\n")
+print("------------------------------------------------------")
 print("\n")
