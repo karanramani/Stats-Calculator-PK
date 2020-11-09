@@ -74,3 +74,19 @@ print(randomchoice2)
 print("\n")
 print("------------------------------------------------------")
 print("\n")
+
+print("\n")
+
+# 5. Set a seed and randomly.select the same value from a list
+randomchoicewseed1 = random.choice(randomX)
+randomchoicewseed2 = random.choice(randomY)
+
+print("Random Choice 1 (From Integer list with seed): ")
+print(randomchoicewseed1)
+
+print("Random Choice 2 (From Float list with seed): ")
+print(randomchoicewseed2)
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
