@@ -142,3 +142,26 @@ print(Calculator.mode1(a))
 print("\n")
 print("------------------------------------------------------")
 print("\n")
+
+print("variance")
+a = [1,2,3,4,5,6,6,5,5]
+print(Calculator.variance1(a))
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+print("standardDeviation")
+a = [1,2,3,4,5,6,6,5,5]
+print(Calculator.std1(a))
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+print("zscore:")
+a = [1,1,2,3,5,6,11,7,5,5,8,10,13,13]
+print(Calculator.zscore(a))
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
+
