@@ -90,3 +90,16 @@ print(randomchoicewseed2)
 print("\n")
 print("------------------------------------------------------")
 print("\n")
+
+# 6. Select N number of items from a list without a seed
+N = 10
+print("N number of items from a list without a seed(Integer):")
+print(random.sample(randomA, N))
+print("\n")
+print("N number of items from a list without a seed(Float):")
+print(random.sample(randomB, N))
+print("\n")
+
+print("\n")
+print("------------------------------------------------------")
+print("\n")
